@@ -1,19 +1,14 @@
-import { HttpStatusCode } from "@config";
+import { HttpStatusCode } from "@constants";
+import { HandlerContext } from "@types";
 import { handleError, responseObject } from "@utils";
 import { RequestHandler } from "express";
 import { logger } from "netwrap";
 
-type HandlerContext = {
-  statusCode: HttpStatusCode;
-  message: string;
-  payload: unknown;
-};
-
 export default (
     operation: (
       rest: Parameters<RequestHandler>,
-      context: HandlerContext
-    ) => Promise<void> | void
+      context: HandlerContext,
+    ) => Promise<void> | void,
   ) =>
   async (...rest: Parameters<RequestHandler>) => {
     const res = rest[1];

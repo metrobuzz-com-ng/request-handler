@@ -1,6 +1,6 @@
-import type { ResponseObjectFn } from "../../types";
+import { ResponseObjectFn } from "@types";
 
-export const responseObject: ResponseObjectFn = (props) => {
+const responseObject: ResponseObjectFn = (props) => {
   const {
     res,
     statusCode,
@@ -38,3 +38,5 @@ export const responseObject: ResponseObjectFn = (props) => {
 
   return res.status(statusCode).send(responseObject);
 };
+
+export default responseObject;

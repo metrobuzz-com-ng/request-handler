@@ -1,3 +1,4 @@
+import { HttpStatusCode } from "@constants";
 import type { Response } from "express";
 
 export type ResponseObjectFn = (props: {
@@ -8,3 +9,9 @@ export type ResponseObjectFn = (props: {
   responseStatusCode?: string | number;
   status?: boolean;
 }) => void;
+
+export type HandlerContext = {
+  statusCode: HttpStatusCode;
+  message: string;
+  payload: unknown;
+};
