@@ -69,7 +69,7 @@ configuration options and integrates seamlessly with your Express routes.
 #### Installation
 
 ```bash
-npm install express-request-handler
+npm install @metrobuzz/express-request-handler
 ```
 
 #### Usage
@@ -79,7 +79,7 @@ npm install express-request-handler
 Here's the most basic way to send a response to the client:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 
 const router = Router();
@@ -100,7 +100,7 @@ export default router;
 Wrap your route handler to add enhanced error handling and logging:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 
 const router = Router();
@@ -124,7 +124,7 @@ You can also throw errors out of the main asynchronous function and they will be
 handled
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 import { logger } from "netwrap";
 
@@ -157,7 +157,7 @@ The wrapper function accepts a configuration object to customize its behavior:
 Example:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 import { logger } from "netwrap";
 
@@ -193,7 +193,7 @@ If a response is sent within the `operation` function, the wrapper will detect
 it and prevent further response processing:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 
 const router = Router();
@@ -222,7 +222,7 @@ return a boolean. The wrapper will check if a response has been sent and stop
 further execution accordingly:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 import { logger } from "netwrap";
 
@@ -254,7 +254,7 @@ export default router;
 To disable logging for specific handlers, set the `logging` option to `false`:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 
 const router = Router();
@@ -296,7 +296,7 @@ that the `operation` function only sends a single response.
 **Example**:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 
 const router = Router();
@@ -359,7 +359,7 @@ handling cases where no response is sent.
 **Example**:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 
 const router = Router();
@@ -415,7 +415,7 @@ consider whether the use of `async/await` is appropriate.
 **Example**:
 
 ```typescript
-import wrapHandler from "express-request-handler";
+import wrapHandler from "@metrobuzz/express-request-handler";
 import { Router } from "express";
 
 const router = Router();

@@ -1,5 +1,5 @@
 {
-  "name": "express-request-handler",
+  "name": "@metrobuzz/express-request-handler",
   "version": "0.0.1",
   "description": "This module provides a higher-order function (HOF) that wraps Express route handlers to standardize error handling, logging, and response formatting.",
   "main": "dist/index.js",
@@ -22,6 +22,8 @@
   },
   "keywords": [
     "request-handler",
+    "metrobuzz",
+    "metro",
     "express-request-handler",
     "express",
     "express-request",
