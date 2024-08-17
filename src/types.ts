@@ -1,4 +1,4 @@
-import { HttpStatusCode } from "@constants";
+import { HttpStatusCode } from "./constants";
 import type { Response } from "express";
 
 export type ResponseObjectFn = (props: {

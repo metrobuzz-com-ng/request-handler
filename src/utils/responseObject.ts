@@ -1,4 +1,4 @@
-import { ResponseObjectFn } from "@types";
+import { ResponseObjectFn } from "../types";
 
 const responseObject: ResponseObjectFn = (props) => {
   const {
