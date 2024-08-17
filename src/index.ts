@@ -4,7 +4,8 @@ import { handleError, responseObject } from "./utils";
 import { RequestHandler } from "express";
 import { logger } from "netwrap";
 
-export default (
+const requestHandler =
+  (
     operation: (
       rest: Parameters<RequestHandler>,
       context: HandlerContext,
@@ -59,3 +60,5 @@ export default (
       }
     }
   };
+
+export default requestHandler;
