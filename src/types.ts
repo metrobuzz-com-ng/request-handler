@@ -1,5 +1,5 @@
 import { HttpStatusCode } from "./constants";
-import type { Response } from "express";
+import type { RequestHandler, Response } from "express";
 
 export type ResponseObjectFn = (props: {
   res: Response;
@@ -14,4 +14,16 @@ export type HandlerContext = {
   statusCode: HttpStatusCode;
   message: string;
   payload: unknown;
+  responseSent: boolean;
+};
+
+export type ErrorHandler = (
+  error: unknown,
+  context: HandlerContext,
+  rest: Parameters<RequestHandler>,
+) => void;
+
+export type WrapperConfig = {
+  logging?: boolean;
+  errorHandler?: ErrorHandler;
 };
